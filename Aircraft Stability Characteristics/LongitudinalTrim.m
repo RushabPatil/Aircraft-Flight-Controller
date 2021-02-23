@@ -14,11 +14,11 @@ b = 10.7; %Wingspan
 S_t =   ; %Tail Area
 g = 9.8; %accelearation due to gravitation
 altitude = 3; %can be changed based on requirements
-rho =   %Density at a given height
-i_t =
-epsilon_0 =
+rho = 0.909;  %Density at a given height -> use function from desnity calculator
+i_t =   ; % Incident angle
+epsilon_0 = ; %
 k_epsilon_alpha =
-delta_epsilon =
+
 
 %% Preliminary Equations
 
