@@ -2,11 +2,19 @@
 %% Rushab Patil
 
 %%F-35 Specifications
-W = 
-altitude = 
-rho = 
-S_t =
-S =
+%% Constants
+W = 266893.3; %Maximum Weight
+T_max = 169032.42; %Maximum thrust available
+C_D_0 = 0.007; %Zero Lift Drag - from presentation
+C_L_max = 0.65; %Maximum Lift coefficient - from presentation
+rho_sl = 1.225; %Density at sea level
+e = 0.85761; %Oswald Efficiency Factor - from presentation
+S = 42.7; %Wing's Area
+b = 10.7; %Wingspan
+S_t =   ; %Tail Area
+g = 9.8; %accelearation due to gravitation
+altitude = 3; %can be changed based on requirements
+rho =   %Density at a given height
 i_t =
 epsilon_0 =
 k_epsilon_alpha =
@@ -34,14 +42,14 @@ C_M = C_M_0 + C_M_alpha * alpha + C_M_delta_epsilon * delta_epsilon;
 
 final_result = [0; 0; 0]; %[velocity; alpha_trim; delta_trim]
 
-for V = 10:1:200
+for V = 10:1:200 %For loop for finding trim conditions at different velocities
+
+    %Setting up the matrices
     A = [C_L_alpha C_L_delta_epsilon;
         C_M_alpha C_M_delta_epsilon];
-
     C = [W / Q - C_L_0; -C_M_0]
 
     %B = [alpha_trim; delta_epsilon_trim]
-
     B = A \ C;
 
     final_result = horzcat(final_result, B);
