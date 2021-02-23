@@ -5,7 +5,7 @@
 %% Constants
 W = 266893.3; %Maximum Weight
 T_max = 169032.42; %Maximum thrust available
-C_D_0 = 0.007; %Zero Lift Drag - from presentation
+C_D_0 = 0.0 07; %Zero Lift Drag - from presentation
 C_L_max = 0.65; %Maximum Lift coefficient - from presentation
 rho_sl = 1.225; %Density at sea level
 e = 0.85761; %Oswald Efficiency Factor - from presentation
