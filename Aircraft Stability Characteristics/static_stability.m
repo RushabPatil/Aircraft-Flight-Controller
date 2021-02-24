@@ -1,15 +1,23 @@
 %%F-35 Static Stability Analysis
 
+%%Assumptions
+% Airfoil -> NACA 66-206
+% Aerodynamic Center of the wing and the tail is at quarter - chord
+% 
+
 %%F-35 Specifications
+C_L_0_w = 0.1724; % at angle of attack = 0 degrees
+C_L_0_t = 0 ; %-> Symmetric Airfoil 
 S = 42.7; %Wing's Area
 S_t = 11.96; %Tail Area
 b = 10.7; %Wingspan
 b_t = 6.65; %Horizontal tail wingspan
-c_bar =  %Mean Chord
-l_t = %Mean Length
+c_bar = 4.78; %Mean Chord
+l_t = 3.6576;%Mean Length
 epsilon_0 = %from experiment
 k_epsilon_alpha = %from experiment
-i_t = %incidence angle of tail
+i_t = 0; %incidence angle of tail
+e = 0.6; %Oswald Efficiency Factor - From the AE405 class slides
 
 %%Preliminary Calculations
 V_H = (S_t / S) * (l_t / c_bar);
