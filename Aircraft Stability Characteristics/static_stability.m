@@ -3,7 +3,7 @@
 %%Assumptions
 % Airfoil -> NACA 66-206
 % Aerodynamic Center of the wing and the tail is at quarter - chord
-% 
+
 
 %%F-35 Specifications
 C_L_0_w = 0.1724; % at angle of attack = 0 degrees
